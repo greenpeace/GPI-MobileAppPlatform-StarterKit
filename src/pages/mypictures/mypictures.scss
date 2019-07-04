@@ -1,0 +1,71 @@
+page-mypictures {
+  .bg {
+    background-image: url(../assets/img/menu-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h4 {
+    text-align: center;
+    margin-top: 2em;
+
+  }
+  .mypicture {
+
+    .image {
+      position: relative;
+
+    }
+    .cat-time {
+      margin-top: -44px;
+    }
+    .badge {
+      background: $dark;
+      padding: 6px 12px;
+      position: relative;
+      opacity: .6;
+      font-size: 1.8rem;
+      font-weight: 100;
+      left: 10px;
+    }
+    img {
+      height: 200px;
+    }
+    .bg-overlay {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .note {
+      position: relative;
+      float: right;
+      right: 12px;
+      padding: 5px;
+      background: $dark;
+      opacity: 0.6;
+      color: $white;
+    }
+    .card-content {
+      padding: 10px 10px 0px 10px;
+      .col {
+        padding: 0;
+      }
+      p {
+        font-size: 2.0rem;
+
+      }
+      .bookmark {
+        color: $danger;
+        float: right;
+        font-size: 3rem;
+        position: relative;
+        top: -8px;
+
+      }
+    }
+  }
+
+}

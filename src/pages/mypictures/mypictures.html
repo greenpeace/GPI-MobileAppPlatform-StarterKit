@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cleanup App</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content [ngClass]="{bg:!isMypictures()}">
+  <div *ngIf="!isMypictures()">
+    <h4>Your Submissions!</h4>
+  </div>
+  <ion-card class="mypicture" *ngIf="isMypictures()">
+    <div *ngFor="let mypicture of mypictures">
+      <div (click)="litterDetails(mypicture.key)">
+        <div class="image">
+          <img src={{mypicture.imgUrl}}>
+          <div class="bg-overlay"></div>
+        </div>
+      </div>
+      <ion-card-content>
+        <ion-row>
+          <ion-col col-11>
+            <p>{{mypicture.brand}}</p>
+          </ion-col>
+          <ion-col col-1>
+            <ion-icon (click)="removeMypicture(mypicture.key)" class="bookmark" name="trash"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </div>
+  </ion-card>
+</ion-content>

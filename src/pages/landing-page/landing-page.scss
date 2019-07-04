@@ -1,0 +1,52 @@
+page-landing-page {
+  .page-content {
+    background: url('../../assets/img/bgImage.jpg') no-repeat center;
+    background-size: cover;
+    color: $white;
+    .overlay-bg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+    }
+    .header {
+      text-align: center;
+      margin-top: 38%;
+      position: relative;
+      img {
+        width: 5rem;
+      }
+      .title {
+        font-size: 4rem;
+        margin: 0;
+      }
+    }
+    //header
+    .button-grp {
+      margin: 30% 4% 0 4%;
+      position: relative;
+      .signin-btn {
+        background: $primary;
+        letter-spacing: 1px;
+        margin-bottom: 1em;
+        height: 2.4em;
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        font-weight: 300;
+      }
+      .signup-btn {
+        @extend .signin-btn;
+        background: $secondary;
+      }
+      p {
+        float: right;
+        margin: 0;
+        padding-right: 8px;
+        opacity: .8;
+        font-style: italic;
+        font-weight: 100;
+      }
+    }
+    // button-grp
+  }
+}

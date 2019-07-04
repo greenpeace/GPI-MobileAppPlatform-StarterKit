@@ -1,0 +1,68 @@
+page-registration {
+
+  .register-content {
+    background: url('../../assets/img/bgImage.jpg') no-repeat center;
+    background-size: cover;
+    .overlay-bg {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .header {
+      text-align: center;
+      margin-top: 16%;
+      position: relative;
+      img {
+        width: 5rem;
+      }
+      .title {
+        font-size: 4rem;
+        margin: 0;
+      }
+    }
+    //header
+
+    .register-wrapper {
+      margin: 6% 4% 0 4%;
+      position: relative;
+      .input-item {
+        border-radius: 5px;
+        height: 5rem;
+        margin-bottom: 1rem;
+        .text-input {
+          font-size: 16px;
+          letter-spacing: 1px;
+          color: $black;
+        }
+        .icon {
+          color: $primary;
+        }
+      }
+      .register-btn {
+        background: $primary;
+        height: 4.9rem;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        margin: 3rem 0;
+        font-weight: 300;
+      }
+      .link {
+
+        margin: 0;
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 5rem;
+        font-weight: 300;
+        opacity: .95;
+        a {
+          color: $primary;
+        }
+      }
+    }
+    // registration-wrapper
+
+  }
+
+}

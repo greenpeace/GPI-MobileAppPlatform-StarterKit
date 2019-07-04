@@ -1,0 +1,129 @@
+page-home {
+  .bg {
+    background-image: url(../assets/img/home-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+ /* header-bg*/
+  .toolbar-background {
+    background: $black;
+  }
+  .menu-btn {
+    color: $white;
+  }
+
+ /*header title*/
+
+ .toolbar-title {
+    color: $white;
+  }
+  
+ .category {
+  
+    .image {
+      position: relative;
+
+   }
+    .cat-time {
+      margin-top: -44px;
+    }
+    .badge {
+      background: $dark;
+      padding: 6px 12px;
+      position: relative;
+      opacity: .6;
+      font-size: 1.8rem;
+      font-weight: 100;
+      left: 10px;
+    }
+    img {
+      height: 200px;
+    }
+    .bg-overlay {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .note {
+      position: relative;
+      float: right;
+      right: 12px;
+      padding: 5px;
+      background: $dark;
+      opacity: 0.6;
+      color: $white;
+    }
+    .card-content {
+      padding: 10px 10px 0px 10px;
+      .col {
+        padding: 0;
+      }
+      p {
+        font-size: 1.2em;
+
+     }
+      .bookmark {
+        color: $primary;
+        float: right;
+        font-size: 3rem;
+        position: relative;
+        top: -8px;
+
+     }
+    }
+  }
+  .newest {
+    flex-wrap: wrap;
+
+   .item-2 {
+      @extend .item;
+      .badge {
+        background: $grid1;
+      }
+    }
+    .item-3 {
+      @extend .item;
+      .badge {
+        background: $grid2;
+      }
+    }
+    .item-4 {
+      @extend .item;
+      .badge {
+        background: $grid3;
+      }
+    }
+  }
+  //newest
+  /*trending cleanup*/
+  .trending {
+    flex-wrap: wrap;
+    .item {
+      padding: 0;
+      .card {
+        margin: 4px 12px 4px 12px;
+      }
+      img {
+        height: 8em;
+      }
+      .content {
+        color: $black;
+        margin: 1rem;
+        text-transform: capitalize;
+        font-weight: 400;
+      }
+      .footer {
+        margin: 1rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 8px;
+        color: $grey;
+      }
+    }
+  }
+}

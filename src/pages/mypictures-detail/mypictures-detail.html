@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cleanup App</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <div class="top-img-wrapper">
+    <!-- image -->
+    <img class="top-image" src={{mypicture.imgUrl}}>
+    <!-- Real floating action button, fixed. It will not scroll with the content -->
+    <ion-fab top right edge class="fab-icon">
+      <button ion-fab mini class="my-fab">
+        <ion-icon name="share"></ion-icon>
+      </button>
+      <ion-fab-list>
+        <button ion-fab (click)="fbSharing()">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </button>
+        <button ion-fab (click)="twitterSharing()">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </button>
+        <button ion-fab (click)="googleSharing()">
+          <ion-icon name="logo-googleplus"></ion-icon>
+        </button>
+        <button ion-fab (click)="whatsAppSharing()">
+          <ion-icon ios="logo-whatsapp" md="logo-whatsapp"></ion-icon>
+        </button>
+      </ion-fab-list>
+    </ion-fab>
+  </div>
+</ion-content>

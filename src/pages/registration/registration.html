@@ -1,0 +1,44 @@
+<ion-content class="register-content">
+  <!-- this div over the background -->
+  <div class="overlay-bg"></div>
+  <!-- header -->
+  <div class="header">
+    <!-- logo -->
+    <img src="assets/icon/logoIcon.png">
+    <!-- title -->
+    <p class="title">Cleanup App</p>
+  </div>
+  <!-- register wrapper -->
+  <form [formGroup]="registration" (ngSubmit)="onRegistration()">
+    <div class="register-wrapper">
+      <!-- user name input -->
+      <ion-item class="input-item">
+        <ion-input type="text" placeholder="Your namn" formControlName="fullName"></ion-input>
+        <ion-icon ios="ios-person-outline" md="md-person" item-right></ion-icon>
+      </ion-item>
+      <!-- email input -->
+      <ion-item class="input-item">
+        <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+        <ion-icon ios="ios-mail-outline" md="md-mail" item-right></ion-icon>
+      </ion-item>
+      <!-- password input -->
+      <ion-item class="input-item">
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+        <ion-icon ios="ios-lock-outline" md="md-lock" item-right></ion-icon>
+      </ion-item>
+      <!-- mobile No input -->
+      <ion-item class="input-item">
+        <ion-input type="number" placeholder="Mobile number" formControlName="mobileNumber"></ion-input>
+        <ion-icon ios="ios-call-outline" md="md-call" item-right></ion-icon>
+      </ion-item>
+
+      <!-- register button -->
+      <button ion-button block class="register-btn" type="submit" [disabled]="!registration.valid">REGISTER</button>
+
+      <!-- Registration link -->
+      <p class="link">Already have an account ? <a (click)="navLogin()">Log in</a></p>
+
+    </div>
+  </form>
+
+</ion-content>

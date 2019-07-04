@@ -1,0 +1,53 @@
+<ion-content class="login-content">
+  <!-- this div over the background -->
+  <div class="overlay-bg"></div>
+  <!-- header -->
+  <div class="header">
+    <!-- logo -->
+    <img src="assets/icon/logoIcon.png">
+    <!-- title -->
+    <p class="title">Cleanup App</p>
+  </div>
+  <!-- login wrapper -->
+  <form [formGroup]="login" (ngSubmit)="onLogin()">
+    <div class="login-wrapper">
+      <!-- user name input -->
+      <ion-item class="input-item-username">
+        <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+      </ion-item>
+      <!-- password input -->
+      <ion-item class="input-item-pass">
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      </ion-item>
+      <!-- sigin button -->
+      <button ion-button block class="signin-btn" type="submit" [disabled]="!login.valid">Log In</button>
+      <ion-row>
+        <ion-col>
+          <p (click)="forget();" class="forget">Forgot your password ?</p>
+        </ion-col>
+      </ion-row>
+      <!-- divider line -->
+      <div class="OR">
+        <p class="line">_____________</p>
+        <p>OR</p>
+        <p class="line">_____________</p>
+      </div>
+
+      <!-- button-signing with fb -->
+      <button ion-button block class="fb-signin" type="button" (click)="onFacebookLogin()">
+        <span class="small">f</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Connect with Facebook
+      </button>
+
+      <!-- button-signing with google -->
+      <button ion-button block class="google-signin" type="button" (click)="twitterLogin()">
+        <span class="small">t</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Connect with Twitter
+      </button>
+
+      <!-- Registration link -->
+      <p class="link">Do not have an account ? <a (click)="navRegister()">Register</a></p>
+
+    </div>
+  </form>
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="">
+    <ion-row>
+      <img class="cover" src="assets/img/ocean.jpg"><br>
+    </ion-row>
+    <ion-row>
+      <img class="img" [src]="url"/><br>
+    </ion-row>
+
+    <ion-row>
+
+      <input type="file" name="file" id="inputFileId" class="inputfile"
+              accept="image/*" (change)="UploadNewImage()">
+      <label for="inputFileId" class="upload">
+        <ion-icon ios="ios-cloud-upload" md="md-cloud-upload"></ion-icon>
+      </label>
+    </ion-row>
+  </div>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <ion-list>
+
+      <!--name-->
+      <ion-item>
+        <ion-label>Namn:</ion-label>
+        <ion-input type="text" name="name" id="email"
+                   [(ngModel)]="user.name" name="name"></ion-input>
+      </ion-item>
+      <!--email no-->
+      <ion-item>
+        <ion-label>E-post ID:</ion-label>
+        <ion-input type="email" name="card" id="card"
+                   [(ngModel)]="user.email" name="email"></ion-input>
+      </ion-item>
+
+      <!--password-->
+      <ion-item>
+        <ion-label>Mobilnummer.:</ion-label>
+        <ion-input type="number" name="mobileNumber" id="mobileNumber"
+                   [(ngModel)]="user.mobileNumber"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <!--button-->
+    <button class="login-btn" ion-button type="submit">Save</button>
+  </form>
+
+</ion-content>

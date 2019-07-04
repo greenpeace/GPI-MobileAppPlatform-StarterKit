@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Chat with us</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-item>
+	<div class="chatlist">
+		  <chatwithus-list [chatmessages]="chatmessages"></chatwithus-list>
+		  <chatwithus-form [chatmessage]="chatmessage" [chatmessages]="chatmessages"></chatwithus-form>
+	</div>
+  </ion-item>
+</ion-card>
+</ion-content>

@@ -1,0 +1,104 @@
+page-login {
+
+  .login-content {
+    background: url('../../assets/img/bgImage.jpg') no-repeat center;
+    background-size: cover;
+    .overlay-bg {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+
+    }
+    .header {
+      text-align: center;
+      margin-top: 16%;
+      position: relative;
+      img {
+        width: 5rem;
+      }
+      .title {
+        font-size: 4rem;
+        margin: 0;
+      }
+    }
+    //header
+
+    .login-wrapper {
+      margin: 10% 4% 0 4%;
+      position: relative;
+      .input-item-username {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        height: 5rem;
+        .text-input {
+          font-size: 16px;
+          letter-spacing: 1px;
+          color: #000;
+        }
+      }
+      .input-item-pass {
+        @extend .input-item-username;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+      }
+      .signin-btn {
+        background: $primary;
+        height: 4.9rem;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        margin: 3rem 0;
+        font-weight: 300;
+      }
+      .OR {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2em;
+        padding: 0 15%;
+        p {
+          margin: 0;
+        }
+        .line {
+          margin-top: -6px;
+          opacity: .5;
+        }
+      }
+      .fb-signin {
+        background: $facebook;
+        letter-spacing: 1px;
+        margin-bottom: 1em;
+        height: 4.9rem;
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        font-weight: 300;
+        .small {
+          text-transform: lowercase;
+          font-weight: 400;
+          font-size: 2rem;
+        }
+      }
+      .google-signin {
+        @extend .fb-signin;
+        background: $google;
+      }
+      .link {
+        margin: 0;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 300;
+        opacity: .95 a {
+          color: $primary;
+        }
+      }
+      .forget {
+        float: right;
+        font-style: italic;
+        font-size: 12px;
+      }
+    }
+    // login-wrapper
+  }
+}

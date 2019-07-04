@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cleanup App</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="bg">
+  <ion-item>
+    <ion-icon name="logo-twitter" item-start></ion-icon>
+  </ion-item>  
+  <ion-card>
+        <ion-title>
+            Take a picture
+        </ion-title>
+        <button ion-button full (click)="takePicture()" *ngIf="base64Image">Take a Picture</button>
+  </ion-card>
+
+  <ion-card>
+      <img src="{{ base64Image }}" />
+  </ion-card>
+
+  <ion-card>
+      <ion-card-content>
+      <ion-list>    
+        <ion-item>
+          <ion-label>Brand</ion-label>
+              <ion-select [(ngModel)]="brand" (ionChange)="onSelectedBrandChange($event)">
+                 <ion-option value="brand" *ngFor="let item of brandsList; let idx = index" value="{{item.title}}.{{item.$key}}">{{item.title}}</ion-option>  
+              </ion-select>
+        </ion-item>
+      </ion-list>
+   </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+      <ion-card-content>
+        <ion-list>  
+            <ion-item>
+              <ion-label>Type of Trash</ion-label>
+                  <ion-select [(ngModel)]="typeoftrash" (ionChange)="onSelectedTypeoftrashChange($event)">
+                   <ion-option value="typeoftrash" *ngFor="let item of typeoftrashList" value="{{item.title}}.{{item.$key}}"> {{item.title}}</ion-option>
+                  </ion-select>
+            </ion-item>
+        </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <button ion-button full (click)="saveImage()">Save Image</button>
+  </ion-card> 
+</ion-content>

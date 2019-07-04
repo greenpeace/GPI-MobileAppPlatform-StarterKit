@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-toggle checked="false"></ion-toggle>
+      <ion-label>
+        Show push notification
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-toggle [(ngModel)]="automl" checked="true" (ionChange)="changeSetting()"></ion-toggle>
+      <ion-label>
+        AutoML (experimental)
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contact</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-row class="top">
+    <ion-icon name="mail">...</ion-icon>
+  </ion-row>
+
+  <form (ngSubmit)="submit()" #f="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input type="text" name="name" id="name" [(ngModel)]=user.name required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input type="mail" name="email" id="email" [(ngModel)]=user.email required></ion-input>
+      </ion-item>
+      <ion-item class="message">
+        <ion-label>Message</ion-label>
+        <ion-textarea rows="6" lineHeight="42" name="message" id="message"
+                      [(ngModel)]=user.message required></ion-textarea>
+      </ion-item>
+    </ion-list>
+    <button ion-button block class="signin-btn" type="submit" [disabled]="!f.valid">Submit</button>
+  </form>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "cleanupapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "990f1105"
+}

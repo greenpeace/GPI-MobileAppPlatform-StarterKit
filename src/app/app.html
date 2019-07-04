@@ -1,0 +1,76 @@
+{{ notification_message | async | json }}
+
+<ion-menu persistent="true" [content]="content" class="menu">
+  <ion-content class="sidebar-menu">
+    <ion-row>
+      <ion-col class="cover"></ion-col>
+    </ion-row>
+    <ion-row class="img-name-row">
+      <ion-col col-4>
+        <img class="user-img" [src]=url>
+      </ion-col>
+      <ion-col col-8>
+        <p class="user-name">Cleanup App</p>
+      </ion-col>
+    </ion-row>
+    <button menuClose class="menu-item" ion-item (click)="home()">
+      <ion-icon name="home" item-left></ion-icon>
+      Take a picture
+    </button>
+
+    <button menuClose class="menu-item" ion-item *ngIf="isLoggedin()" (click)="mypictures()">
+      <ion-icon name="grid" item-left></ion-icon>
+      My pictures
+    </button>
+
+    <button menuClose class="menu-item" ion-item *ngIf="isLoggedin()" (click)="plasticmap()">
+      <ion-icon name="map" item-left></ion-icon>
+      Cleanup Map
+    </button>
+
+    <button menuClose class="menu-item" ion-item *ngIf="isLoggedin()" (click)="profile()">
+      <ion-icon name="person" item-left></ion-icon>
+      Profile
+    </button>
+
+    <button menuClose class="menu-item" ion-item (click)="setting()">
+      <ion-icon name="settings" item-left></ion-icon>
+      Settings
+    </button>
+
+    <button menuClose class="menu-item" ion-item *ngIf="isLoggedin()" (click)="contact()">
+      <ion-icon name="contacts" item-left></ion-icon>
+      Contact
+    </button>
+
+    <button menuClose class="menu-item" ion-item *ngIf="isLoggedin()" (click)="invite()">
+      <ion-icon name="contacts" item-left></ion-icon>
+      Invite Friends
+    </button>
+
+<!--
+    <button menuClose class="menu-item" ion-item *ngIf="isLoggedin()" (click)="message()">
+      <ion-icon name="alert" item-left></ion-icon>
+      Ask Question
+    </button>
+-->
+    <button menuClose class="menu-item" ion-item *ngIf="isLoggedin()" (click)="chatwithus()">
+      <ion-icon name="chatbubbles" item-left></ion-icon>
+      Chat with us
+    </button>
+
+    <button menuClose class="menu-item" ion-item *ngIf="!isLoggedin()" (click)="login()">
+      <ion-icon name="log-in" item-left></ion-icon>
+      Log In
+    </button>
+    
+    <button menuClose class="menu-item" ion-item *ngIf="isLoggedin()" (click)="logout()">
+      <ion-icon name="log-out" item-left></ion-icon>
+      Log Ut
+    </button>
+  
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
