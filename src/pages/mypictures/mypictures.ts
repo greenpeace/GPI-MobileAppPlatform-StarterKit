@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {IonicPage, NavController, ToastController} from 'ionic-angular';
 import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {GoogleAnalytics} from '@ionic-native/google-analytics';
+import {GoogleAnalytics} from '@ionic-native/google-analytics/ngx';
 import { map } from 'rxjs/operators/map';
 
 @IonicPage()

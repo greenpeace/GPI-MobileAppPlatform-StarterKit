@@ -2,11 +2,11 @@ import {Component, ViewChild} from '@angular/core';
 import {Nav, Platform} from 'ionic-angular';
 import {AngularFireDatabase, AngularFireObject} from '@angular/fire/database';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {StatusBar} from '@ionic-native/status-bar';
-import {SplashScreen} from '@ionic-native/splash-screen';
-import {OneSignal} from '@ionic-native/onesignal';
-import {SocialSharing} from '@ionic-native/social-sharing';
-import {GoogleAnalytics} from '@ionic-native/google-analytics';
+import {StatusBar} from '@ionic-native/status-bar/ngx';
+import {SplashScreen} from '@ionic-native/splash-screen/ngx';
+import {OneSignal} from '@ionic-native/onesignal/ngx';
+import {SocialSharing} from '@ionic-native/social-sharing/ngx';
+import {GoogleAnalytics} from '@ionic-native/google-analytics/ngx';
 import { MessagingService } from './shared/messaging.service';
 
 @Component({

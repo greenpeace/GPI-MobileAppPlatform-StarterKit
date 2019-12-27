@@ -9,11 +9,10 @@
 
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-import {Geolocation} from '@ionic-native/geolocation';
-import { GoogleAnalytics } from '@ionic-native/google-analytics';
-import {AngularFireDatabase,  AngularFireList} from '@angular/fire/database';
-import {AngularFireAuth} from '@angular/fire/auth';
-import { map } from 'rxjs/operators/map';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
+import { AngularFireDatabase,  AngularFireList } from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 declare var google: any;
 

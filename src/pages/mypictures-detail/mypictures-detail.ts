@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {NavController, NavParams, ToastController, IonicPage} from 'ionic-angular';
 import {AngularFireDatabase, AngularFireObject} from '@angular/fire/database';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {SocialSharing} from '@ionic-native/social-sharing';
+import {SocialSharing} from '@ionic-native/social-sharing/ngx';
 
 
 @IonicPage()

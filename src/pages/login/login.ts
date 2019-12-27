@@ -6,7 +6,7 @@ import {OauthCordova} from 'ng2-cordova-oauth/platform/cordova';
 import {AngularFireDatabase} from '@angular/fire/database';
 import {AngularFireAuth} from '@angular/fire/auth';
 import * as firebase from 'firebase';
-import {TwitterConnect} from '@ionic-native/twitter-connect';
+import {TwitterConnect} from '@ionic-native/twitter-connect/ngx';
 
 @IonicPage()
 @Component({

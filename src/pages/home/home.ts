@@ -2,13 +2,13 @@ import {Component} from '@angular/core';
 import {NavController, NavParams, IonicPage, LoadingController,  ToastController} from 'ionic-angular';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
-import {SocialSharing} from '@ionic-native/social-sharing';
-import {Camera} from '@ionic-native/camera';
-import {Geolocation} from '@ionic-native/geolocation';
+import {SocialSharing} from '@ionic-native/social-sharing/ngx';
+import {Camera} from '@ionic-native/camera/ngx';
+import {Geolocation} from '@ionic-native/geolocation/ngx';
 import {Platform} from 'ionic-angular';
 import {GoogleCloudVisionServiceProvider} from '../../providers/google-cloud-vision-service/google-cloud-vision-service';
 import {GoogleCloudAutoMlServiceProvider} from '../../providers/google-cloud-vision-service/google-cloud-automl-vision';
-import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
 import 'rxjs/add/operator/catch';
 import * as firebase from 'firebase';
 
