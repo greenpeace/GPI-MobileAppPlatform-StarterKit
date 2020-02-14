@@ -40,6 +40,9 @@ plugins/ios.json
 angular-cli.json
 src/config/firebase.config.ts
 src/config/googlecloud.api.ts
+src/config/googlecloudautoml.ts
+src/config/dialogflow.ts
+src/firebase-messaging-sw.js
 www/
 $RECYCLE.BIN/
 
