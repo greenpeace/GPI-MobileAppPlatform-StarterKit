@@ -11,12 +11,12 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireMessagingModule} from '@angular/fire/messaging';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 
-import {Geolocation} from '@ionic-native/geolocation';
+import {Geolocation} from '@ionic-native/geolocation/ngx';
 import {firebaseConfig} from '../config/firebase.config';
 import {GoogleCloudVisionServiceProvider} from '../providers/google-cloud-vision-service/google-cloud-vision-service';
 import {GoogleCloudAutoMlServiceProvider} from '../providers/google-cloud-vision-service/google-cloud-automl-vision';
 import {DialogflowProvider} from '../providers/dialogflow/dialogflow';
-import {GoogleAnalytics} from '@ionic-native/google-analytics';
+import {GoogleAnalytics} from '@ionic-native/google-analytics/ngx';
 
 import 'firebase/storage';
 

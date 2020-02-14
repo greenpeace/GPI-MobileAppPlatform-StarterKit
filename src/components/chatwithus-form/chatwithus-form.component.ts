@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Chatmessage } from '../../models/chatwithus.model';
 import { DialogflowProvider } from '../../providers/dialogflow/dialogflow';
-import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { GoogleAnalytics } from '@ionic-native/google-analytics/ngx';
 
 @Component({
   selector: 'chatwithus-form',

@@ -28,6 +28,32 @@ GPI Mobile App Platform StarterKit is a modular repetable plaform and is build o
 
 5. Change the details in the config.xml file
 
+## Built on version
+    $ ionic info
+
+Ionic:
+
+   Ionic CLI          : 5.4.2 (/usr/local/lib/node_modules/ionic)
+   Ionic Framework    : ionic-angular 3.9.2
+   @ionic/app-scripts : 3.2.1
+
+Cordova:
+
+   Cordova CLI       : 9.0.0 (cordova-lib@9.0.1)
+   Cordova Platforms : android 8.1.0
+   Cordova Plugins   : cordova-plugin-ionic 3.1.3, (and 18 other plugins)
+
+Utility:
+
+   cordova-res : not installed
+   native-run  : 0.2.7 (update available: 0.2.8)
+
+System:
+
+   NodeJS : v8.10.0 (/usr/local/bin/node)
+   npm    : 6.12.0
+   OS     : macOS Catalina
+
 ## Version Checking and upgrades
 
 Check cordova versions 
@@ -194,10 +220,46 @@ Run your app in IOS emulator
 
 Run your app in Android emulator
 
-     $ ionic cordova platform add android
+    $ ionic cordova platform add android
 
-     $ ionic cordova run android  
+    $ ionic cordova run android  
 
+## Restoring
+You may sometime need to restore your setup
+
+    $ ionic cordova prepare android
+
+## To clean your installation
+
+    $ cordova clean android
+
+## To remove and add back a platform
+From time to time you may run into version issues, espcially after an upgrade
+
+    $ cordova platforms remove android
+    $ cordova platforms add android
+
+## List Cordova instal plugins
+
+    $  cordova plugin list
+
+## Update Cordova to latest version
+
+Install update plugin globally:
+
+      $ npm install -g cordova-check-plugins
+Then run from the root of your Cordova project. You can optionally update outdated plugins interactively or automatically, e.g.
+
+      $ cordova-check-plugins --update=auto
+## Upgrade with npm and force update
+      $ npm update -f
+
+## Cordova Plugin Reuirements
+  The plugin 'cordova-plugin-compat' is required by (cordova-plugin-camera, cordova-plugin-geolocation) but forcing removal
+  The plugin 'cordova-plugin-splashscreen' is required by (cordova-plugin-ionic)
+
+  cordova-plugin-compat is deprecated in newer version of android above 6.3.0 you would need tobuild the app using the version
+      $ cordova platform add android@6.2.0
 
 ## Using Social Login Facebook and Twitter
 The app supports social login with Facebook and Twitter 
